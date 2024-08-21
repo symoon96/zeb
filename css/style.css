@@ -1,3 +1,94 @@
 /*-------------------------------------------------------------------
     @공통
 -------------------------------------------------------------------*/
+/* headline */
+.headline {flex: none; padding: 10px;}
+.headline .title {font-size: 20px; line-height: 1.2; color: #E9ECEF; font-weight: 700;}
+
+/* box */
+.box-area {padding: 20px 20px; background-color: #212529; border-radius: 10px;}
+.box-area:has(.lookup) {flex: none !important;}
+.box-area + .box-area {margin-top: 10px;}
+.box-area > .inner {height: 100%; min-height: 0; display: flex; flex-direction: column;}
+
+/* legend */
+.legend ul {display: flex; gap: 0 10px;}
+.legend ul li {font-size: 12px; color: #868E96; font-weight: 700; display: flex; align-items: center; gap: 0 4px;}
+
+/* lookup */
+.lookup {padding: 0 20px; display: flex; align-items: center;}
+.lookup .filter-area {flex: 1 0; display: flex; flex-wrap: wrap; gap: 10px 40px;}
+.lookup .filter-area dl {font-size: 12px; font-weight: 500; color: #CED4DA;}
+.lookup .filter-area dl dt + dd {margin-top: 10px;}
+.lookup .filter-area select.select.v1 {width: 100px;}
+
+/* 대시보드 */
+.dashboard {display: flex; gap: 0 20px;}
+.dashboard .left,
+.dashboard .right {width: 455px;}
+.dashboard .center {flex: 1 0; min-width: 0;}
+.dashboard .independent .total-std {margin-top: 11px; display: flex; align-items: center; gap: 0 48px;}
+.dashboard .independent .total-std .chart-area {width: 200px;}
+.dashboard .independent .total-std .cont-area dl + dl {margin-top: 20px;}
+.dashboard .independent .total-std .cont-area dl dt {font-size: 16px; font-weight: 700; color: #ffffff;}
+.dashboard .independent .total-std .cont-area dl dd {margin-top: 4px;}
+.dashboard .independent .total-std .cont-area dl dd p {display: flex; align-items: center; gap: 0 4px; font-size: 12px; font-weight: 700; color: #ffffff;}
+.dashboard .independent .total-std .cont-area dl dd p strong {font-size: 24px; font-weight: 700;}
+.dashboard .independent .date-std {margin-top: 30px;}
+.dashboard .architecture .status {margin-top: 32px; display: flex; justify-content: space-between;}
+.dashboard .architecture .status dl dt {font-size: 12px; color: #868E96; font-weight: 700;}
+.dashboard .architecture .status dl dd {margin-top: 4px;}
+.dashboard .architecture .status dl dd p {display: flex; align-items: center; gap: 0 4px; font-size: 12px; color: #868E96; font-weight: 700;}
+.dashboard .architecture .status dl dd p strong {font-weight: 700; color: #E9ECEF; font-size: 16px;}
+.dashboard .unit .chart-area {margin-top: 18px;}
+.dashboard .use .ratio {display: flex; overflow: hidden; height: 40px; border-radius: 50px; align-items: center; margin-top: 28px;}
+.dashboard .use .ratio .item {flex: 1 0; display: flex; justify-content: center; height: 40px;}
+.dashboard .use .ratio .item:first-child {flex: none; background-color: #12B886;}
+.dashboard .use .ratio .item:last-child {background-color: #7950F2;}
+.dashboard .use .ratio .item dl {display: flex; align-items: center; gap: 0 12px;}
+.dashboard .use .ratio .item dl dt {font-size: 16px; font-weight: 700; color: #ffffff;}
+.dashboard .use .ratio .item dl dd {}
+.dashboard .use .ratio .item dl dd p {display: flex; align-items: center; gap: 0 8px; font-size: 16px; font-weight: 700; color: #ffffff;}
+.dashboard .use .ratio .item dl dd p strong {font-size: 24px;}
+.dashboard .use .chart-group {margin-top: 30px; display: flex; justify-content: space-between; gap: 0 10px;}
+.dashboard .use .chart-group .item {display: flex; align-items: center; gap: 0 20px;}
+.dashboard .use .chart-group .item .chart-area {width: 140px;}
+.dashboard .use .chart-group .item .cont-area dl {display: flex; align-items: center; justify-content: flex-start; gap: 0 4px;}
+.dashboard .use .chart-group .item .cont-area dl + dl {margin-top: 10px;}
+.dashboard .use .chart-group .item .cont-area dl dt {display: flex; align-items: center; gap: 0 4px; color: #868E96; font-size: 12px; font-weight: 700; min-width: 45px;}
+.dashboard .use .chart-group .item .cont-area dl dd {font-size: 12px; font-weight: 700; color: #ffffff;}
+.dashboard .use .tab-wrap {margin-top: 35px;}
+.dashboard .use .tab-wrap .tab-cont-wrap .tab-cont .chart-area {height: 186px;}
+.dashboard .use .tab-wrap .tab-cont-wrap .tab-cont .chart-area img {max-width: none; height: 100%; width: 100%;}
+.dashboard .source .status {margin-top: 30px; display: flex; gap: 0 100px; justify-content: center;}
+.dashboard .source .status .item .title {display: flex; align-items: center; gap: 0 8px;}
+.dashboard .source .status .item .title p {font-size: 16px; color: #E9ECEF; font-weight: 700;}
+.dashboard .source .status .item .title + dl {margin-top: 20px;}
+.dashboard .source .status .item dl + dl {margin-top: 10px;}
+.dashboard .source .status .item dl dt {font-size: 14px; font-weight: 700; color: #868E96;}
+.dashboard .source .status .item dl dd {margin-top: 4px; display: flex; align-items: center; gap: 0 4px;}
+.dashboard .source .status .item dl dd p {font-weight: 700; font-size: 12px; color: #868E96}
+.dashboard .source .status .item dl dd p.value {font-size: 16px; color: #E9ECEF;}
+.dashboard .source .status .item dl:nth-of-type(1) dd p.value {font-size: 20px;}
+.dashboard .source .status .item:nth-child(1) dl:nth-of-type(1) dd p.value {color: #FFA94D;}
+.dashboard .source .status .item:nth-child(2) dl:nth-of-type(1) dd p.value {color: #82C91E;}
+.dashboard .source .chart-area {margin-top: 32px;}
+.dashboard .weather .status {margin-top: 20px; display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;}
+.dashboard .weather .status dl dt {font-size: 12px; color: #868E96; font-weight: 700;}
+.dashboard .weather .status dl dd {margin-top: 4px;}
+.dashboard .weather .status dl dd p {display: flex; align-items: center; gap: 0 4px; font-size: 12px; color: #868E96; font-weight: 700;}
+.dashboard .weather .status dl dd p strong {font-weight: 700; color: #E9ECEF; font-size: 16px;}
+.dashboard .weather .chart-area {margin-top: 18px;}
+.dashboard .alarm .status {margin-top: 18px; display: flex; align-items: stretch; gap: 0 15px;}
+.dashboard .alarm .status .item {display: flex; align-items: stretch; overflow: hidden; border-radius: 10px; flex: 1 0;}
+.dashboard .alarm .status .item:nth-of-type(1) {width: 140px; flex: none;}
+.dashboard .alarm .status .item .tit-area {background-color: #495057; width: 60px; flex: none; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 4px; padding: 9px 0;}
+.dashboard .alarm .status .item .tit-area p {font-size: 12px; font-weight: 700; color: #868E96; text-align: center;}
+.dashboard .alarm .status .item .cont-area {flex: 1 0; display: flex; align-items: center; justify-content: center; background-color: #343A40; gap: 0 30px;}
+.dashboard .alarm .status .item .cont-area .situation {width: 40px; flex: none; height: 40px; line-height: 40px; text-align: center; color: #ffffff; border-radius: 50%; font-size: 12px; font-weight: 700;}
+.dashboard .alarm .status .item .cont-area .situation.normal {background-color: #4C6EF5;}
+.dashboard .alarm .status .item .cont-area dl dt {font-size: 12px; font-weight: 700; color: #868E96; text-align: center;}
+.dashboard .alarm .status .item .cont-area dl dd {font-size: 16px; font-weight: 700; text-align: center; margin-top: 4px;}
+.dashboard .alarm .status .item .cont-area dl:nth-of-type(1) dd {color: #E9ECEF;}
+.dashboard .alarm .status .item .cont-area dl:nth-of-type(2) dd {color: #4C6EF5;}
+.dashboard .alarm .status .item .cont-area dl:nth-of-type(3) dd {color: #FA5252;}

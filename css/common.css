@@ -6,18 +6,20 @@
 /*-------------------------------------------------------------------
     @공통
 -------------------------------------------------------------------*/
-#skip-nav {height:0}
-#skip-nav a {display: block; position: absolute; left: 0; top: -100px; width: 100%; height: 1px; text-align: center}
-#skip-nav a:focus, #skip a:active {position: absolute; top: 0; z-index: 120; height: 25px; padding: 10px 0; font-size: 1.4em; font-weight: 700; color: #36348f; background: #fff;}
+body {display: flex; flex-direction: column; height: 100dvh; min-width: 1800px;}
+body > * {width: 100%;}
 
 /*-------------------------------------------------------------------
     @header
 -------------------------------------------------------------------*/
-#header {}
-#header .container {padding-left: 30px; padding-right: 30px; display: flex; justify-content: center;}
+#header {background-color: #1B1D1F; flex: none;}
+#header .container {padding-left: 30px; padding-right: 30px; display: flex; justify-content: center; height: 60px;}
 
 .logo {}
 .logo a{ display: block; width: 100%; height: 100%; text-indent: -9999px; }
+
+.etc-area {display: flex; align-items: center; gap: 0 20px;}
+.etc-area {}
 
 .gnb {display: flex; align-items: center; justify-content: center; flex: 1 0; z-index: 2;}
 .gnb ul {display: flex; align-items: center;}
@@ -25,9 +27,22 @@
 .gnb > ul > li > a::after {content: ""; width: 100%; height: 4px; bottom: 0; left: 0; position: absolute;}
 .gnb > ul > li.on > a {opacity: 1; color: #4C6EF5; }
 .gnb > ul > li.on > a::after {background-color: #4C6EF5;}
-.gnb .sitemap {position: absolute; top: 100%; width: 100vw; left: 50%; transform: translateX(-50%); background-color: #000000cc; height: calc(100dvh - 60px);}
+.gnb > ul > li.on > a .ic-gnb01 {background-image: url('../img/icon/ic_gnb_on_01.png');}
+.gnb > ul > li.on > a .ic-gnb02 {background-image: url('../img/icon/ic_gnb_on_02.png');}
+.gnb > ul > li.on > a .ic-gnb03 {background-image: url('../img/icon/ic_gnb_on_03.png');}
+.gnb > ul > li.on > a .ic-gnb04 {background-image: url('../img/icon/ic_gnb_on_04.png');}
+.gnb > ul > li.on > a .ic-gnb05 {background-image: url('../img/icon/ic_gnb_on_05.png');}
+.gnb > ul > li.on > a .ic-gnb06 {background-image: url('../img/icon/ic_gnb_on_06.png');}
+.gnb > ul > li.on > a .ic-gnb07 {background-image: url('../img/icon/ic_gnb_on_07.png');}
+.gnb .sitemap {position: absolute; top: 100%; width: 100vw; left: 50%; transform: translateX(-50%); background-color: #000000cc; height: calc(100dvh - 60px); display: none;}
 .gnb .sitemap ul {padding: 10px 0 35px; background-color: #212529; display: flex; justify-content: center; align-items: flex-start; gap: 0 10px;}
-.gnb .sitemap ul > li > .depth02 > ul {flex-direction: column;}
+.gnb .sitemap ul > li {min-width: 150px;}
+.gnb .sitemap ul > li .depth01 {display: flex; align-items: center; justify-content: center; height: 60px; gap: 0 6px; border-bottom: 1px solid #495057;}
+.gnb .sitemap ul > li .depth01 p {font-size: 14px; font-weight: 600; color: #ffffff;}
+.gnb .sitemap ul > li .depth02 {padding-top: 10px;}
+.gnb .sitemap ul > li .depth02 > ul {flex-direction: column;}
+.gnb .sitemap ul > li .depth02 > ul > li > a {display: block; padding: 8px 10px; font-size: 14px; font-weight: 600; color: #ffffff;}
+.gnb .sitemap ul > li .depth02 > ul > li:hover > a {color: #4C6EF5;}
 
 .gnb-m{}
 
@@ -65,9 +80,12 @@
 /*-------------------------------------------------------------------
     @content
 -------------------------------------------------------------------*/
-#content{}
+#content {display: flex; flex-direction: column; flex: 1 0; min-height: 0; max-height: calc(100% - 60px);}
+#content > .mCustomScrollBox > .mCSB_container > .container {}
+#content > .container {width: 100%; height: 100%; display: flex; flex-direction: column;}
+#content > .container > .box-area {flex: 1 0; min-height: 0;}
 
-.container {padding-left: 20px; padding-right: 20px; margin-left: auto; margin-right: auto; position: relative;}
+.container {padding-left: 20px; padding-right: 20px; margin-left: auto; margin-right: auto; position: relative; flex: 1 0; padding-top: 20px; padding-bottom: 20px;}
 
 .has-padding{}
 

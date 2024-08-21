@@ -14,6 +14,9 @@
     <link href="../css/fonts.css" rel="stylesheet" type="text/css">
     <link href="../css/utility.css" rel="stylesheet" type="text/css">
 
+    <!-- dist/css -->
+    <link href="../dist/css/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css">
+
     <!-- custom css -->
     <link href="../css/common.css" rel="stylesheet" type="text/css">
     <link href="../css/components.css" rel="stylesheet" type="text/css">
@@ -21,6 +24,9 @@
 
     <!-- jquery -->
     <script src="../js/jquery.min.js"></script>
+
+    <!-- dist/js -->
+    <script src="../dist/js/jquery.mCustomScrollbar.js"></script>
     
     <!-- custom js -->
     <script src="../js/common.js"></script>
@@ -34,7 +40,7 @@
                 <a href="javascript:void(0);"></a>
             </h1>
             <div class="gnb">
-                <div class="btn-sitemap"></div>
+                <div class="btn-ic btn-sitemap"></div>
                 <ul>
                     <li class="on">
                         <a href="">
@@ -176,7 +182,7 @@
             <div class="etc-area">
                 <button class="btn-txt v1"><i class="ic-login"></i>로그인</button>
                 <button class="btn-txt v1"><i class="ic-user"></i>James</button>
-                <button class="btn-txt v1"><i class="ic-logoup"></i>로그아웃</button>
+                <button class="btn-txt v1"><i class="ic-logout"></i>로그아웃</button>
             </div>
         </div>
     </div>
@@ -186,13 +192,13 @@
     <div id="content">
         <div class="container">
             <div class="dashboard">
-                <div class="d-flex gap-2">
+                <div class="d-flex gap-2 flex-direction-column left">
                     <div class="box-area independent">
                         <p class="tit v1">에너지 자립률</p>
 
                         <div class="total-std">
                             <div class="chart-area">
-                                <img src="" alt="">
+                                <img src="../img/@temp_graph01.png" alt="">
                             </div>
                             <div class="cont-area">
                                 <dl>
@@ -222,7 +228,7 @@
                             </div>
                         </div>
                         <div class="date-std">
-                            <div class="chart-area"><img src="" alt=""></div>
+                            <div class="chart-area"><img src="../img/@temp_graph02.png" alt=""></div>
                         </div>
                     </div>
                     <div class="box-area architecture">
@@ -255,7 +261,7 @@
                             </dl>
                         </div>
                     </div>
-                    <div class="box-area">
+                    <div class="box-area unit">
                         <div class="tit-wrap v1">
                             <div class="tit-area">
                                 <p class="tit v1">원 단위(1㎥당) 에너지 추이</p>
@@ -269,11 +275,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="chart-area"><img src="" alt=""></div>
+                        <div class="chart-area"><img src="../img/@temp_graph03.png" alt=""></div>
                     </div>
                 </div>
-                <div class="d-flex gap-2">
-                    <div class="box-area">
+                <div class="d-flex gap-2 flex-direction-column center">
+                    <div class="box-area use">
                         <div class="tit-wrap v1">
                             <div class="tit-area">
                                 <p class="tit v1">사용량 정보</p>
@@ -310,7 +316,7 @@
                         </div>
 
                         <div class="ratio">
-                            <div class="item">
+                            <div class="item" style="width: 33%;">
                                 <dl>
                                     <dt>공용부</dt>
                                     <dd>
@@ -328,10 +334,10 @@
                             </div>
                         </div>
 
-                        <div class="d-flex justify-content-between">
+                        <div class="chart-group">
                             <div class="item">
                                 <div class="chart-area">
-                                    <img src="" alt="">
+                                    <img src="../img/@temp_graph04.png" alt="">
                                 </div>
                                 <div class="cont-area">
                                     <dl>
@@ -354,7 +360,7 @@
                             </div>
                             <div class="item">
                                 <div class="chart-area">
-                                    <img src="" alt="">
+                                    <img src="../img/@temp_graph05.png" alt="">
                                 </div>
                                 <div class="cont-area">
                                     <dl>
@@ -377,7 +383,7 @@
                             </div>
                             <div class="item">
                                 <div class="chart-area">
-                                    <img src="" alt="">
+                                    <img src="../img/@temp_graph06.png" alt="">
                                 </div>
                                 <div class="cont-area">
                                     <dl>
@@ -436,10 +442,10 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="chart-area">
-                                        <img src="" alt="">
+                                    <div class="chart-area mt30">
+                                        <img src="../img/@temp_graph07.png" alt="">
                                     </div>
-                                    <div class="tit-wrap v1">
+                                    <div class="tit-wrap v1 mt55">
                                         <div class="tit-area">
                                             <p class="tit v2">에너지원별</p>
                                         </div>
@@ -468,13 +474,13 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="chart-area">
-                                        <img src="" alt="">
+                                    <div class="chart-area mt30">
+                                        <img src="../img/@temp_graph08.png" alt="">
                                     </div>
                                 </div>
-                                <div class="tab-cont">
+                                <div class="tab-cont pb25">
                                     <p class="tit v2">에너지 용도별</p>
-                                    <div class="card-group">
+                                    <div class="card-group mt15">
                                         <div class="card">
                                             <div class="tit-wrap v1">
                                                 <div class="tit-area">
@@ -539,7 +545,7 @@
                                                         <dt>사용량</dt>
                                                         <dd>
                                                             <p class="value">12,345</p>
-                                                            <p>㎥</p>
+                                                            <p>kWh</p>
                                                         </dd>
                                                     </dl>
                                                 </div>
@@ -554,7 +560,7 @@
                                                     <dl>
                                                         <dt>전월대비</dt>
                                                         <dd>
-                                                            <p class="value red">+ 12,345</p>
+                                                            <p class="value green">- 12,345</p>
                                                             <p>원</p>
                                                         </dd>
                                                     </dl>
@@ -625,6 +631,49 @@
                                                         <dt>사용량</dt>
                                                         <dd>
                                                             <p class="value">12,345</p>
+                                                            <p>kWh</p>
+                                                        </dd>
+                                                    </dl>
+                                                </div>
+                                                <div class="prev-area">
+                                                    <dl>
+                                                        <dt>전월</dt>
+                                                        <dd>
+                                                            <p class="value">12,345,678</p>
+                                                            <p>원</p>
+                                                        </dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>전월대비</dt>
+                                                        <dd>
+                                                            <p class="value green">- 12,345</p>
+                                                            <p>원</p>
+                                                        </dd>
+                                                    </dl>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="tit-wrap v1">
+                                                <div class="tit-area">
+                                                    <span class="label v1 clr03"></span>
+                                                    <p class="tit v2">난방</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="specific-area">
+                                                <div class="this-area">
+                                                    <dl>
+                                                        <dt>이번달</dt>
+                                                        <dd>
+                                                            <p class="value">12,345,678</p>
+                                                            <p>원</p>
+                                                        </dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>사용량</dt>
+                                                        <dd>
+                                                            <p class="value">12,345</p>
                                                             <p>㎥</p>
                                                         </dd>
                                                     </dl>
@@ -647,9 +696,138 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="card">
+                                            <div class="tit-wrap v1">
+                                                <div class="tit-area">
+                                                    <span class="label v1 clr04"></span>
+                                                    <p class="tit v2">조명</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="specific-area">
+                                                <div class="this-area">
+                                                    <dl>
+                                                        <dt>이번달</dt>
+                                                        <dd>
+                                                            <p class="value">12,345,678</p>
+                                                            <p>원</p>
+                                                        </dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>사용량</dt>
+                                                        <dd>
+                                                            <p class="value">12,345</p>
+                                                            <p>kWh</p>
+                                                        </dd>
+                                                    </dl>
+                                                </div>
+                                                <div class="prev-area">
+                                                    <dl>
+                                                        <dt>전월</dt>
+                                                        <dd>
+                                                            <p class="value">12,345,678</p>
+                                                            <p>원</p>
+                                                        </dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>전월대비</dt>
+                                                        <dd>
+                                                            <p class="value green">- 12,345</p>
+                                                            <p>원</p>
+                                                        </dd>
+                                                    </dl>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="tit-wrap v1">
+                                                <div class="tit-area">
+                                                    <span class="label v1 clr05"></span>
+                                                    <p class="tit v2">급탕</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="specific-area">
+                                                <div class="this-area">
+                                                    <dl>
+                                                        <dt>이번달</dt>
+                                                        <dd>
+                                                            <p class="value">12,345,678</p>
+                                                            <p>원</p>
+                                                        </dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>사용량</dt>
+                                                        <dd>
+                                                            <p class="value">12,345</p>
+                                                            <p>㎥</p>
+                                                        </dd>
+                                                    </dl>
+                                                </div>
+                                                <div class="prev-area">
+                                                    <dl>
+                                                        <dt>전월</dt>
+                                                        <dd>
+                                                            <p class="value">12,345,678</p>
+                                                            <p>원</p>
+                                                        </dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>전월대비</dt>
+                                                        <dd>
+                                                            <p class="value red">+ 12,345</p>
+                                                            <p>원</p>
+                                                        </dd>
+                                                    </dl>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="tit-wrap v1">
+                                                <div class="tit-area">
+                                                    <span class="label v1 clr06"></span>
+                                                    <p class="tit v2">승강기</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="specific-area">
+                                                <div class="this-area">
+                                                    <dl>
+                                                        <dt>이번달</dt>
+                                                        <dd>
+                                                            <p class="value">12,345,678</p>
+                                                            <p>원</p>
+                                                        </dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>사용량</dt>
+                                                        <dd>
+                                                            <p class="value">12,345</p>
+                                                            <p>kWh</p>
+                                                        </dd>
+                                                    </dl>
+                                                </div>
+                                                <div class="prev-area">
+                                                    <dl>
+                                                        <dt>전월</dt>
+                                                        <dd>
+                                                            <p class="value">12,345,678</p>
+                                                            <p>원</p>
+                                                        </dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>전월대비</dt>
+                                                        <dd>
+                                                            <p class="value green">- 12,345</p>
+                                                            <p>원</p>
+                                                        </dd>
+                                                    </dl>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <p class="tit v2">에너지원별</p>
-                                    <div class="card-group">
+                                    <p class="tit v2 mt45">에너지원별</p>
+                                    <div class="card-group mt15">
                                         <div class="card">
                                             <div class="tit-wrap v1">
                                                 <div class="tit-area">
@@ -714,7 +892,7 @@
                                                         <dt>사용량</dt>
                                                         <dd>
                                                             <p class="value">12,345</p>
-                                                            <p>㎥</p>
+                                                            <p>kWh</p>
                                                         </dd>
                                                     </dl>
                                                 </div>
@@ -729,7 +907,7 @@
                                                     <dl>
                                                         <dt>전월대비</dt>
                                                         <dd>
-                                                            <p class="value red">+ 12,345</p>
+                                                            <p class="value green">- 12,345</p>
                                                             <p>원</p>
                                                         </dd>
                                                     </dl>
@@ -815,7 +993,7 @@
                                                     <dl>
                                                         <dt>전월대비</dt>
                                                         <dd>
-                                                            <p class="value red">+ 12,345</p>
+                                                            <p class="value green">- 12,345</p>
                                                             <p>원</p>
                                                         </dd>
                                                     </dl>
@@ -828,7 +1006,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="d-flex gap-2">
+                <div class="d-flex gap-2 flex-direction-column right">
                     <div class="box-area source">
                         <p class="tit v1">생산량 추이</p>
 
@@ -876,11 +1054,11 @@
                         </div>
 
                         <div class="chart-area">
-                            <img src="" alt="">
+                            <img src="../img/@temp_graph09.png" alt="">
                         </div>
                     </div>
                     <div class="box-area weather">
-                        <div class="tit-wrap">
+                        <div class="tit-wrap v1">
                             <div class="tit-area">
                                 <p class="tit v1">날씨 정보</p>
                             </div>
@@ -892,35 +1070,35 @@
                         <div class="status">
                             <dl>
                                 <dt>온도</dt>
-                                <dd><strong>24</strong>℃</dd>
+                                <dd><p><strong>24</strong>℃</p></dd>
                             </dl>
                             <dl>
                                 <dt>습도</dt>
-                                <dd><strong>20</strong>%</dd>
+                                <dd><p><strong>20</strong>%</p></dd>
                             </dl>
                             <dl>
                                 <dt>강우량</dt>
-                                <dd><strong>20</strong>mm</dd>
+                                <dd><p><strong>20</strong>mm</p></dd>
                             </dl>
                             <dl>
                                 <dt>미세먼지</dt>
-                                <dd><strong>100</strong>µg/m³</dd>
+                                <dd><p><strong>100</strong>µg/m³</p></dd>
                             </dl>
                             <dl>
                                 <dt>초미세먼지</dt>
-                                <dd><strong>10</strong>µg/m³</dd>
+                                <dd><p><strong>10</strong>µg/m³</p></dd>
                             </dl>
                         </div>
 
-                        <div class="chart-area"><img src="" alt=""></div>
+                        <div class="chart-area"><img src="../img/@temp_graph10.png" alt=""></div>
                     </div>
                     <div class="box-area alarm">
-                        <div class="tit-wrap">
+                        <div class="tit-wrap v1">
                             <div class="tit-area">
                                 <p class="tit v1">알림 정보</p>
                             </div>
 
-                            <div class="etc-area">
+                            <div class="etc-area gap-2">
                                 <dl>
                                     <dt>마지막 데이터 백업일</dt>
                                     <dd>2024.05.01</dd>
@@ -958,7 +1136,7 @@
                                         <dd>20</dd>
                                     </dl>
                                 </div>
-                            </dl>
+                            </div>
                         </div>
                     </div>
                 </div>
